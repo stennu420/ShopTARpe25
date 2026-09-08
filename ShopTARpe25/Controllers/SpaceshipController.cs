@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ShopTARpe25.Models.Spaceship;
 
 namespace ShopTARpe25.Controllers
 {
@@ -12,6 +13,17 @@ namespace ShopTARpe25.Controllers
             return View();
         }
 
-        //teha Data projekti alla ShopTARpe25Context nimega class
+
+        [HttpGet]
+        public IActionResult Create() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(SpaceshipCreateViewModel vm) 
+        {
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
