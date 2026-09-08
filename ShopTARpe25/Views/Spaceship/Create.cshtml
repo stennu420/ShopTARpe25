@@ -1,8 +1,48 @@
 ﻿@model ShopTARpe25.Models.Spaceship.SpaceshipCreateViewModel
 
-
-
 <h1>Create</h1>
+
+@{
+    ViewData["Title"] = "Add Drik";
+}
+
+<form asp-action="=Create">
+    <div class="from-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="from-group">
+        <label asp-for="Classification" class="control-label"></label>
+        <input asp-for="Classification" class="form-control" />
+        <span asp-validation-for="Classification" class="text-danger"></span>
+    </div>
+    <div class="from-group">
+        <label asp-for="BuildDate" class="control-label"></label>
+        <input asp-for="BuildDate" class="form-control" />
+        <span asp-validation-for="BuildDate" class="text-danger"></span>
+    </div>
+    <div class="from-group">
+        <label asp-for="Crew" class="control-label"></label>
+        <input asp-for="Crew" class="form-control" />
+        <span asp-validation-for="Crew" class="text-danger"></span>
+    </div>
+    <div class="from-group">
+        <label asp-for="EnginePower" class="control-label"></label>
+        <input asp-for="EnginePower" class="form-control" />
+        <span asp-validation-for="EnginePower" class="text-danger"></span>
+    </div>
+    <div class="from-group">
+        <label asp-for="CreatedAt" class="control-label"></label>
+        <input asp-for="CreatedAt" class="form-control" />
+        <span asp-validation-for="CreatedAt" class="text-danger"></span>
+    </div>
+    <div class="from-group">
+        <label asp-for="ModifiedAt" class="control-label"></label>
+        <input asp-for="ModifiedAt" class="form-control" />
+        <span asp-validation-for="ModifiedAt" class="text-danger"></span>
+    </div>
+</form>
 
  <div>
     <a asp-action="Index">Tagasi</a>
