@@ -10,7 +10,7 @@ namespace ShopTARpe25.Data
             : base(options)
         {  
         }
-        public DbSet<Spaceship> Spaceship { get; set; }
+        public DbSet<Spaceship> Spaceships { get; set; }
     }
    
     
