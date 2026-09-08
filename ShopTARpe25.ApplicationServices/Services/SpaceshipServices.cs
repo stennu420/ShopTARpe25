@@ -1,11 +1,12 @@
 ﻿using ShopTARpe25.Core.Domain;
 using ShopTARpe25.Core.Dto;
+using ShopTARpe25.Core.ServiceInterface;
 using ShopTARpe25.Data;
 
 
 namespace ShopTARpe25.ApplicationServices.Services
 {
-    public class SpaceshipServices
+    public class SpaceshipServices : ISpaceshipServices
     {
         private readonly ShopTARpe25Context _context;
 
@@ -39,7 +40,7 @@ namespace ShopTARpe25.ApplicationServices.Services
             // on defineeritud Core projektis
             //konstruktori kaudu tuleb injectida repository
 
-            await _context.Spaceship.AddAsync(domain);
+            await _context.Spaceships.AddAsync(domain);
             await _context.SaveChangesAsync();
 
             return domain;
